@@ -1,6 +1,4 @@
 # nerscio
-Archive the most challenging IO issues at NERSC/LBNL, and design an auto-diagnosing platform
+Collecting the most challenging IO issues at NERSC/LBNL
 
 
-# license
-Only NERSC staff can use this without asking me. Otherwise, please drop a line. 
