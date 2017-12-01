@@ -1,0 +1,4 @@
+1. slow hdf5 write performance, 
+2. 1-2GB/s on knl at best
+3. the code simulates the BerkeleyGW or Quantum ESPRESSO IO
+4. the code has ind/col/ffp io pattern

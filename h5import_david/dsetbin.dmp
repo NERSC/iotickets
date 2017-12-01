@@ -1,0 +1,29 @@
+HDF5 "swmr_36137_36137_10000000.h5" {
+DATASET "/data/swmr" {
+   DATATYPE  H5T_IEEE_F64LE
+   DATASPACE  SIMPLE { ( 1200000 ) / ( 1200000 ) }
+   STORAGE_LAYOUT {
+      CONTIGUOUS
+      SIZE 9600000
+      OFFSET 2144
+   }
+   FILTERS {
+      NONE
+   }
+   FILLVALUE {
+      FILL_TIME H5D_FILL_TIME_IFSET
+      VALUE  H5D_FILL_VALUE_DEFAULT
+   }
+   ALLOCATION_TIME {
+      H5D_ALLOC_TIME_LATE
+   }
+   SUBSET {
+      START ( 0 );
+      STRIDE ( 1 );
+      COUNT ( 10 );
+      BLOCK ( 1 );
+      DATA {
+      }
+   }
+}
+}

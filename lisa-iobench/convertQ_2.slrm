@@ -1,0 +1,11 @@
+#!/bin/bash -l
+
+#SBATCH -N 120
+#SBATCH -t 50
+#SBATCH -p regular
+#SBATCH --qos=premium
+#SBATCH -A m1523
+#SBATCH --reservation=INC0082872
+bash
+module load h5py-parallel mpi4py netcdf4-python
+srun -c 3 -n 1020 -u python-mpi -u ./converter_2.py Z3

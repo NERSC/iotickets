@@ -1,0 +1,30 @@
+Currently Loaded Modulefiles:
+  1) modules/3.2.10.6
+  2) intel/17.0.2.174
+  3) craype-network-aries
+  4) craype/2.5.12
+  5) cray-libsci/17.06.1
+  6) udreg/2.3.2-6.0.4.0_12.2__g2f9c3ee.ari
+  7) ugni/6.0.14-6.0.4.0_14.1__ge7db4a2.ari
+  8) pmi/5.0.12
+  9) dmapp/7.1.1-6.0.4.0_46.2__gb8abda2.ari
+ 10) gni-headers/5.0.11-6.0.4.0_7.2__g7136988.ari
+ 11) xpmem/2.2.2-6.0.4.0_3.1__g43b0535.ari
+ 12) job/2.2.2-6.0.4.0_8.2__g3c644b5.ari
+ 13) dvs/2.7_2.2.31-6.0.4.1_6.1__gb3b87e6
+ 14) alps/6.4.1-6.0.4.0_7.2__g86d0f3d.ari
+ 15) rca/2.2.11-6.0.4.0_13.2__g84de67a.ari
+ 16) atp/2.1.1
+ 17) PrgEnv-intel/6.0.4
+ 18) craype-haswell
+ 19) cray-shmem/7.6.0
+ 20) cray-mpich/7.6.0
+ 21) altd/2.0
+ 22) Base-opts/2.4.123-6.0.4.0_10.1__g6460790.ari
+ 23) python/2.7-anaconda
+ 24) h5py-parallel/2.7.1
+4 128 Read 22.5545840263 0 haswell
+4 128 Merge 2.20114588737 0 haswell
+4 128 Filter 1.08677911758 0 haswell
+4 128 Myplot 0.0779337882996 0 haswell
+4 128 Plot 1.48375320435 0 haswell

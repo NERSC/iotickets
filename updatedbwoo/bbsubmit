@@ -1,0 +1,16 @@
+#!/bin/ksh
+
+BBPOSIX1=1node_posix_fpp_bb.job
+BBMPIIO1=1node_mpiio_ssf_bb.job
+BBMPIIO32=32node_mpiio_ssf_bb.job
+BBPOSIX32=32node_posix_fpp_bb.job
+#SLURM_OPTS="--reservation=benchmark"
+# SLURM_OPTS="--reservation=benchmark --qos=serialize"
+# SLURM_OPTS="-d singleton"
+	
+DIR=$PWD
+sbatch $BBPOSIX1
+sbatch $BBMPIIO1
+#sbatch $BBMPIIO32
+#sbatch $BBPOSIX32
+cd $DIR

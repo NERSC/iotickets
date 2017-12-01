@@ -1,0 +1,41 @@
+Process number: 32, Start index: 200, Finish index: 300
+Process number: 32, Start index: 2500, Finish index: 2600
+Process number: 32, Start index: 1100, Finish index: 1200
+Process number: 32, Start index: 1300, Finish index: 1400
+Process number: 32, Start index: 2800, Finish index: 2900
+Process number: 32, Start index: 300, Finish index: 400
+Process number: 32, Start index: 1700, Finish index: 1800
+Process number: 32, Start index: 900, Finish index: 1000
+Process number: 32, Start index: 2100, Finish index: 2200
+Process number: 32, Start index: 500, Finish index: 600
+Process number: 32, Start index: 1400, Finish index: 1500
+Process number: 32, Start index: 100, Finish index: 200
+Process number: 32, Start index: 1000, Finish index: 1100
+Process number: 32, Start index: 3100, Finish index: 3200
+Process number: 32, Start index: 400, Finish index: 500
+Process number: 32, Start index: 700, Finish index: 800
+Process number: 32, Start index: 1200, Finish index: 1300
+Process number: 32, Start index: 1800, Finish index: 1900
+Process number: 32, Start index: 2200, Finish index: 2300
+Process number: 32, Start index: 2000, Finish index: 2100
+Process number: 32, Start index: 1600, Finish index: 1700
+Process number: 32, Start index: 2600, Finish index: 2700
+Process number: 32, Start index: 2700, Finish index: 2800
+Process number: 32, Start index: 0, Finish index: 100
+start transposing
+finish transposing
+Transpose time 0.000025
+start writing
+finish writing
+Independent write time 0.000015
+Data size x: 3200 y: 256000
+File size ~24 GB
+Number of processes 32
+Process number: 32, Start index: 800, Finish index: 900
+Process number: 32, Start index: 2400, Finish index: 2500
+Process number: 32, Start index: 2900, Finish index: 3000
+Process number: 32, Start index: 3000, Finish index: 3100
+Process number: 32, Start index: 600, Finish index: 700
+Process number: 32, Start index: 2300, Finish index: 2400
+Process number: 32, Start index: 1500, Finish index: 1600
+Process number: 32, Start index: 1900, Finish index: 2000

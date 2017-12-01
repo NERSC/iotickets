@@ -1,0 +1,7 @@
+srun: got SIGCONT
+slurmstepd: *** JOB 2249829 ON nid00893 CANCELLED AT 2016-05-18T16:29:19 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: *** STEP 2249829.0 ON nid00893 CANCELLED AT 2016-05-18T16:29:19 ***
+srun: forcing job termination
+srun: error: nid00893: tasks 0-24,26-31: Terminated
+srun: Terminating job step 2249829.0

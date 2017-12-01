@@ -1,0 +1,14 @@
+*.h5
+*.X
+*.x
+log
+*.xtc
+*.rfile
+INC0105376
+INC0107107-hdfissue/lafmc
+lustre_slow_aug8_10
+io-knl_INC0108778
+io-bigmem/_0004
+h5spark*
+netcdf-INC0108663
+

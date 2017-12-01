@@ -1,0 +1,11 @@
+Process number: 0, Start index: 0, Finish index: 100
+start transposing
+finish transposing
+Transpose time 186.907873
+start writing
+finish writing
+Independent write time 1.933307
+Data size x: 200 y: 256000
+File size ~0 GB
+Number of processes 2
+Process number: 1, Start index: 100, Finish index: 200

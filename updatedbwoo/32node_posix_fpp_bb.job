@@ -1,0 +1,52 @@
+#!/bin/ksh
+#SBATCH -N 32 -t 30 -J 32bb_posix_fpp -p debug
+#SBATCH -A mpccc
+#DW jobdw capacity=6784GB access_mode=striped type=scratch
+SCRDIR=$DW_JOB_STRIPED
+
+#ls -l /tmp/ramfs/
+#SCRDIR=/tmp/ramfs/fbench/IOR
+
+. /opt/modules/default/init/ksh
+module load lustre-cray_ari_s
+module load dws
+#module load lustre-cray_ari_s
+#NOST=$(lfs df $SCRDIR | grep OST: | wc -l)  # number of OSTs in file system
+#if (( $NOST == 0 )) ; then
+#  echo "Must be run on a Lustre file system. Not $SCRDIR"
+#  exit
+#fi
+TESTDIR=$SCRDIR/IOR_REGULAR/$SLURM_JOB_NAME/$JOBID
+rm -rf TESTDIR
+mkdir -p $TESTDIR || exit
+
+TRANSFER_SIZE=4 # in MiB
+#STRIPE_SIZE=4   # in MiB
+DATA_TB=0.5    # total file size
+RPN=32        # ranks per node
+NODES=$SLURM_JOB_NUM_NODES     # 
+RANKS=$(( $NODES * $RPN ))     # fully packed
+SEGMENTS=$(( $DATA_TB*1024*1024/$TRANSFER_SIZE/$RANKS ))
+JOBID=${SLURM_JOBID:-$$}
+
+OPTIONS="-a POSIX -F -e -g -b ${TRANSFER_SIZE}m -t ${TRANSFER_SIZE}m -k -v -o $TESTDIR/IOR_file"
+
+#export IOR_HINT__MPI__romio_cb_read=disable
+#export IOR_HINT__MPI__romio_cb_write=disable
+#export MPICH_MPIIO_DVS_MAXNODES=32
+#export DVS_MAXNODES=32
+
+
+OUT=${SLURM_JOB_NAME}_${RANKS}ranks_${RPN}rpn_${NODES}nodes_${JOBID}
+srun -n $RANKS --ntasks-per-node $RPN  IOR $OPTIONS -w -s $SEGMENTS >> ${OUT}.IOR
+srun -n $RANKS --ntasks-per-node $RPN  IOR $OPTIONS -r -s $SEGMENTS >> ${OUT}.IOR
+
+sessID=$(dwstat sessions | grep $SLURM_JOBID | awk '{print $1}')
+echo "session ID is: "${sessID}
+instID=$(dwstat instances | grep $sessID | awk '{print $1}')
+echo "instance ID is: "${instID}
+echo "fragments list:"
+echo "frag state instID capacity gran node"
+dwstat fragments | grep ${instID}
+rm -rf $TESTDIR
+#chgrp fbench *

@@ -1,0 +1,4 @@
+tar -zxvf  distributed-data.tar.gz
+cd distributed-data
+source modules.sh 
+sbatch runit 

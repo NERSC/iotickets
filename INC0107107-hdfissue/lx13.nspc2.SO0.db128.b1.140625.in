@@ -1,0 +1,34 @@
+# Output files
+result file: lx13.nspc2.SO0.db128.b1.140625.res
+data file: lx13.nspc2.SO0.db128.b1.140625.h5
+
+# System
+lattice points: 13
+g: -44.044
+nspecies: 2
+spin: F
+spherical cutoff: F
+
+n1: 65
+n2: 65
+min n1:64
+max n1:66
+min n2:64
+max n2:66
+
+dbeta: 0.0078125
+beta: 1.140625
+SO: 0.0
+
+# Observables
+ODLRO: T
+Nk: T
+heat capacity: T
+dT/T: 0.02
+
+# Sampling
+samples: 25600
+sweeps per sample: 5
+thermalization samples: 0
+dsigma: 0.6
+random seed: 21251

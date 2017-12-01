@@ -1,0 +1,34 @@
+the user has a very simple fortran program to opena  netcdf4 file,
+compiled on computed node, works on login node, but not working on compute node.
+
+ftn read.f90
+
+
+module loaded:
+1) modules/3.2.10.5 11) intel/17.0.1.132 21) xpmem/2.1.1_gf9c9084-2.38 
+2) cray-shmem/7.4.4 12) craype-haswell 22) job/2.1.1_gc1ad964-2.175 
+3) altd/2.0 13) craype-network-aries 23) dvs/2.7_2.1.67_geb949b6-1.0000.eb949b6.2.32 
+4) darshan/3.0.1.1 14) craype/2.5.7 24) alps/6.3.4-2.21 
+5) cray-hdf5-parallel/1.10.0 15) cray-libsci/16.09.1 25) rca/2.1.6_g2c60fbf-2.265 
+6) esmf/6.3.0rp1-defio-intel2016-mpi-O 16) udreg/2.3.2-7.54 26) atp/2.0.3 
+7) cray-memkind 17) ugni/6.0.15-2.2 27) PrgEnv-intel/6.0.3 
+8) papi/5.4.1.3 18) pmi/5.0.10-1.0000.11050.0.0.ari 28) cray-mpich/7.4.4 
+9) cmake/3.5.2 19) dmapp/7.1.1-39.37 29) cray-parallel-netcdf/1.7.0 
+10) cray-netcdf-hdf5parallel/4.3.3.1 20) gni-headers/5.0.11-2.2 30) Base-opts/2.3.117-2.7 
+
+
+not working on haswell and knl compute node
+
+
+Update:
+The code doesn't work on project file system. Works well on scratch
+
+
+Solution:
+
+Turns out nc90_open with NOWRITE option will issue a flock call,
+when running the code on compute node and accessing project file system, 
+cray's dvs layer handles the file system call, 
+but cray's dvs "does not support flock() system calls and will return an error.
+DVS will set errno to ENOTSUPP when a flock() call is attempted for a DVS-projected file system".  
+  

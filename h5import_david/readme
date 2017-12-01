@@ -1,0 +1,9 @@
+h5dump -p -d /data/swmr -s "0" -c "10" --ddl=dsetbin.dmp -b FILE -o dset.bin swmr_36137_36137_10000000.h5 
+
+h5import  dset.bin -c dsetbin.dmp -o new-dset
+
+Error info will be like this:
+Unable to get integer value from file.
+Error in reading floating-point data.
+Error in reading the input file: dset.bin.
+Program aborted.

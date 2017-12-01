@@ -1,0 +1,290 @@
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    fapl = make_fapl(driver, libver, **kwds)
+    fapl = make_fapl(driver, libver, **kwds)
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    fapl = make_fapl(driver, libver, **kwds)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    fapl = make_fapl(driver, libver, **kwds)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    fapl = make_fapl(driver, libver, **kwds)
+    fapl = make_fapl(driver, libver, **kwds)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    fapl = make_fapl(driver, libver, **kwds)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    kwds.setdefault('info', mpi4py.MPI.Info())
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    kwds.setdefault('info', mpi4py.MPI.Info())
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+    fapl = make_fapl(driver, libver, **kwds)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    fapl = make_fapl(driver, libver, **kwds)
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+NameError: global name 'mpi4py' is not defined
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    fapl = make_fapl(driver, libver, **kwds)
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    kwds.setdefault('info', mpi4py.MPI.Info())
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    kwds.setdefault('info', mpi4py.MPI.Info())
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+NameError: global name 'mpi4py' is not defined
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    kwds.setdefault('info', mpi4py.MPI.Info())
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+    kwds.setdefault('info', mpi4py.MPI.Info())
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+    fapl = make_fapl(driver, libver, **kwds)
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    fapl = make_fapl(driver, libver, **kwds)
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    fapl = make_fapl(driver, libver, **kwds)
+    fapl = make_fapl(driver, libver, **kwds)
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    fapl = make_fapl(driver, libver, **kwds)
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+Traceback (most recent call last):
+  File "Create_x_transpose_NERSC.py", line 25, in <module>
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    fapl = make_fapl(driver, libver, **kwds)
+NameError: global name 'mpi4py' is not defined
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+NameError: global name 'mpi4py' is not defined
+    fapl = make_fapl(driver, libver, **kwds)
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    h5f = h5py.File(filename, 'w', driver='mpio', comm=MPI.COMM_WORLD)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 259, in __init__
+NameError: global name 'mpi4py' is not defined
+NameError: global name 'mpi4py' is not defined
+    fapl = make_fapl(driver, libver, **kwds)
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+Rank 14 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 14
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    kwds.setdefault('info', mpi4py.MPI.Info())
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+NameError: global name 'mpi4py' is not defined
+    fapl = make_fapl(driver, libver, **kwds)
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+NameError: global name 'mpi4py' is not defined
+    fapl = make_fapl(driver, libver, **kwds)
+    fapl = make_fapl(driver, libver, **kwds)
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+  File "/usr/common/software/h5py/2.5.0/lib/python2.7/site-packages/h5py-2.5.0-py2.7-linux-x86_64.egg/h5py/_hl/files.py", line 61, in make_fapl
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+NameError: global name 'mpi4py' is not defined
+    kwds.setdefault('info', mpi4py.MPI.Info())
+NameError: global name 'mpi4py' is not defined
+Rank 20 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 20
+Rank 12 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 12
+Rank 8 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+Rank 10 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 10
+Rank 18 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 18
+Rank 22 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 22
+Rank 30 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 30
+Rank 6 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 6
+Rank 16 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 16
+Rank 26 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 26
+Rank 15 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 15
+Rank 2 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2
+Rank 5 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+Rank 28 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 28
+Rank 24 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 24
+Rank 25 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 25
+Rank 4 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4
+Rank 17 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 17
+Rank 11 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 11
+Rank 27 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 27
+Rank 0 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+Rank 19 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 19
+Rank 3 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3
+Rank 7 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 7
+Rank 21 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 21
+Rank 9 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+Rank 31 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 31
+Rank 13 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 13
+Rank 23 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 23
+Rank 29 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 29
+Rank 1 [Wed May 18 15:23:08 2016] [c0-0c0s15n3] application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+srun: error: nid00063: tasks 0-31: Aborted
+srun: Terminating job step 2247303.0
