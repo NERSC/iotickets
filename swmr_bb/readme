@@ -1,0 +1,16 @@
+## start an interactive session
+salloc -N 1 -C haswell --qos=interactive -t 00:10:00 --bbf=bb.conf
+
+## move code and config file to burst buffer
+
+cp bb.conf $DW_JOB_STRIPED
+cp swmr_test.py $DW_JOB_STRIPED
+cd $DW_JOB_STRIPED
+
+## reproduce the error 
+module load python h5py
+export HDF5_USE_FILE_LOCKING=FALSE
+python swmr_test.py
+
+
+
