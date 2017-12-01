@@ -6,6 +6,7 @@ log
 *.rfile
 INC0105376
 INC0107107-hdfissue/lafmc
+berkeleyGw_slowio
 lustre_slow_aug8_10
 io-knl_INC0108778
 io-bigmem/_0004
