@@ -12,5 +12,9 @@ module load python h5py
 export HDF5_USE_FILE_LOCKING=FALSE
 python swmr_test.py
 
+## about the versions
 
+# python is the default python/2.7-anaconda-4.4 module on Cori 
+# h5py is 2.7.1 (default h5py module on Cori)
+# HDF5 is 1.10.1 (hdf5-parallel module on cori)
 
