@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -N 35 
+#SBATCH -C knl,quad,cache
+#SBATCH -p debug
+#SBATCH -J STMdot7
+#SBATCH --mail-type=begin
+#SBATCH --mail-type=end
+#SBATCH --mail-user=yanfei@kitp.ucsb.edu
+#SBATCH -t 00:30:00
+
+
+#run the application:
+#module swap PrgEnv-intel PrgEnv-gnu
+module swap craype-haswell craype-mic-knl
+module load  cray-hdf5-parallel
+   output='/global/cscratch1/sd/yanfei/STMdot7'
+
+   var="$(cat input)"
+   num=$var
+
+#   srun -n 64 -c 4 --cpu_bind=cores numactl -p 1 ./athena -i ../inputs/radiation/athinput.rad_linearwave    -d $output >& $output/output.txt
+   srun -n 4720 --cpu_bind=cores ./athena -i ../inputs/radiation/athinput.globaldisk    -d $output >& $output/output.txt
+
+
+

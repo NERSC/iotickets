@@ -1,0 +1,15 @@
+username: yanfei
+directory: /global/homes/y/yanfei/STMdot7
+date: Jan 17 2018
+
+source: $directory/src
+script: $directory/bin/STMdot7_2
+
+compile:
+      cd $directory
+      module swap craype-haswell craype-mic-knl
+      module load cray-hdf5-parallel 
+      make 
+run:
+      change $output in /global/homes/y/yanfei/STMdot7/bin/STMdot7_2
+      sbatch STMdot7_2

@@ -1,0 +1,43 @@
+Problem Description:
+
+1. Not sure if IO is bottleneck
+2. How to profile IO
+3. How to optimize IO
+***************************************************************************************************
+Diagnose:
+*. Recompile with Darshan, 
+   log at: /global/cscratch1/sd/darshanlogs/1/15/2018/yanfei* 
+   jobid: 9566724
+*. Yes, IO is taking 32% of total run time
+   4720 proceses on KNL, do computation and IO. 
+   All processes write one 518MB HDF5 file every 6 minutes, and 3.7GB checkpoints file
+
+Darshan report
+* 27792 seconds in IO, and 86411 seconds totally in runtime
+* 100 seconds in writing one 518MB HDF5 file   
+* 4K IO (4096 access size) page 2, 'most common access size' in both MPIIO and POSIX
+
+Code report
+* Collective IO is 'turned' on
+
+
+****************************************************************************************************
+
+Problem Description by User:
+
+Yanfei Jiang
+2018-01-17 09:49:21
+Hi,
+
+* Is there any way to see the amount of time spent in I/O for jobs using KNL nodes in Cori? 
+* I can see the Darshan log files. But in my nersc, when I click the Luster IO, it says "No LMT data available". 
+* I want to see whether I/O is taking a significant fraction of time or not.
+
+Thanks.
+-- 
+Yan-Fei Jiang
+
+KITP Fellow
+Kohn Hall,
+University of California at Santa Barbara,
+Santa Barbara, CA 93106
