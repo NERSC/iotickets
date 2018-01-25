@@ -14,6 +14,7 @@
 module swap craype-haswell craype-mic-knl
 module load  cray-hdf5-parallel
 export MPICH_MPIIO_HINTS_DISPLAY=1
+export MPICH_MPIIO_HINTS="romio_no_indep_rw=true:romio_cb_write=enable:romio_ds_write=disable:cb_nodes=2:cb_buffer_size=16777216"
 
 output='/global/cscratch1/sd/jialin/STMdot7'
 mkdir -p $output
