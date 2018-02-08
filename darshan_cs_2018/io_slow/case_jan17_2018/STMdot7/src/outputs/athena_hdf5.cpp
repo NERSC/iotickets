@@ -6,6 +6,7 @@
 
 // C++ headers
 #include <cstdio>     // sprintf()
+#include <stdlib.h>
 #include <cstring>    // strlen(), strncpy()
 #include <fstream>    // ofstream
 #include <iomanip>    // setfill(), setw()
@@ -687,35 +688,87 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
 #ifdef MPI_PARALLEL
   H5Pset_dxpl_mpio(property_list, H5FD_MPIO_COLLECTIVE);
 #endif
-
+  H5D_mpio_actual_io_mode_t * actual_io_mode;
+  herr_t io_mode= H5Pget_mpio_actual_io_mode(property_list, actual_io_mode);
+  if(Globals::my_rank==0){
+    if(io_mode>=0){
+    printf("IO mode:%d\n",*actual_io_mode);
+    }else printf("io mode error code:%d\n",io_mode);
+  } 
+  
+  uint32_t * local_no_collective_cause;
+  uint32_t * global_no_collective_cause;
+//  herr_t whyio=H5Pget_mpio_no_collective_cause( property_list, local_no_collective_cause, global_no_collective_cause);
+//  printf("rank:%d io local:%lu,global:%lu\n",Globals::my_rank, local_no_collective_cause, global_no_collective_cause);
+//  exit(1);
   // dump all the data
   // Write refinement level and logical location
+  double t1, t2;
+  MPI_Barrier(MPI_COMM_WORLD);
+  t1=MPI_Wtime();
+  if(Globals::my_rank==0){printf("Start Writting dataset_levels\n");}
   H5Dwrite(dataset_levels, H5T_NATIVE_INT, memspace_blocks, filespace_blocks,
       property_list, levels_mesh);
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_locations\n",t2-t1);}
+  t1=t2;
   H5Dwrite(dataset_locations, H5T_NATIVE_LONG, memspace_blocks_3, filespace_blocks_3,
       property_list, locations_mesh);
-
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_x1f\n",t2-t1);}
+  t1=t2;
   // Write coordinates
   H5Dwrite(dataset_x1f, H5T_NATIVE_FLOAT, memspace_blocks_nx1, filespace_blocks_nx1,
       property_list, x1f_mesh);
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_x2f\n",t2-t1);}
+  t1=t2;
   H5Dwrite(dataset_x2f, H5T_NATIVE_FLOAT, memspace_blocks_nx2, filespace_blocks_nx2,
       property_list, x2f_mesh);
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\ntart Writting dataset_x3f\n",t2-t1);}
+  t1=t2;
   H5Dwrite(dataset_x3f, H5T_NATIVE_FLOAT, memspace_blocks_nx3, filespace_blocks_nx3,
       property_list, x3f_mesh);
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_x1v\n",t2-t1);}
+  t1=t2;
   H5Dwrite(dataset_x1v, H5T_NATIVE_FLOAT, memspace_blocks_nx1v, filespace_blocks_nx1v,
       property_list, x1v_mesh);
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_x2v\n",t2-t1);}
+  t1=t2;
   H5Dwrite(dataset_x2v, H5T_NATIVE_FLOAT, memspace_blocks_nx2v, filespace_blocks_nx2v,
       property_list, x2v_mesh);
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_x3v\n",t2-t1);}
+  t1=t2;
   H5Dwrite(dataset_x3v, H5T_NATIVE_FLOAT, memspace_blocks_nx3v, filespace_blocks_nx3v,
       property_list, x3v_mesh);
-
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){printf("costs: %.2f sec\nStart Writting dataset_celldata\n",t2-t1);}
+  t1=t2;
   // Write cell data
   for (int n = 0; n < num_datasets; ++n)
     H5Dwrite(datasets_celldata[n], H5T_NATIVE_FLOAT,
         memspaces_vars_blocks_nx3_nx2_nx1[n], filespaces_vars_blocks_nx3_nx2_nx1[n],
         property_list, data_buffers[n]);
-
-
+  MPI_Barrier(MPI_COMM_WORLD);
+  t2=MPI_Wtime();
+  if(Globals::my_rank==0){
+  printf("costs: %.2f sec\n",t2-t1);
+  herr_t whyio=H5Pget_mpio_no_collective_cause( property_list, local_no_collective_cause, global_no_collective_cause);
+  printf("rank:%d io local:%lu,global:%lu\n",Globals::my_rank, local_no_collective_cause, global_no_collective_cause);
+  //exit(1);
+  }
   // Close property list
   H5Pclose(property_list);
 

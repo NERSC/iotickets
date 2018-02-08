@@ -14,15 +14,15 @@
 module swap craype-haswell craype-mic-knl
 module load  cray-hdf5-parallel
 export MPICH_MPIIO_HINTS_DISPLAY=1
-export MPICH_MPIIO_HINTS="romio_no_indep_rw=true:romio_cb_write=enable:romio_ds_write=disable:cb_nodes=2:cb_buffer_size=16777216"
+export MPICH_MPIIO_HINTS="romio_no_indep_rw=true:romio_cb_write=enable:romio_ds_write=disable:cb_nodes=4:cb_buffer_size=16777216"
 
-output='/global/cscratch1/sd/jialin/STMdot7'
-mkdir -p $output
-var="$(cat input)"
-num=$var
-
-#   srun -n 64 -c 4 --cpu_bind=cores numactl -p 1 ./athena -i ../inputs/radiation/athinput.rad_linearwave    -d $output >& $output/output.txt
-   srun -n 4720 --cpu_bind=cores ./athena -r $output/restart/disk.$num.rst   -d $output >& $output/output.txt
+export output='/global/cscratch1/sd/jialin/STMdot7'
+#mkdir -p $output
+#var="$(cat input)"
+#num=$var
+export num=00450
+#srun -n 64 -c 4 --cpu_bind=cores numactl -p 1 ./athena -i ../inputs/radiation/athinput.rad_linearwave    -d $output >& $output/output.txt
+srun -n 4720 --cpu_bind=cores ./athena -r $output/restart/disk.$num.rst   -d $output >& $output/output.txt
 
 
 
