@@ -1,0 +1,6 @@
+module swap craype-haswell craype-mic-knl
+module load  cray-hdf5-parallel
+export MPICH_MPIIO_HINTS_DISPLAY=1
+export output='/global/cscratch1/sd/jialin/STMdot7'
+export num=00450
+

@@ -89,9 +89,9 @@ void FormattedTableOutput::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool f
     }
 
     // print file header
-    fprintf(pfile,"# Athena++ data at time=%e",pm->time);
-    fprintf(pfile,"  cycle=%d",pmb->pmy_mesh->ncycle);
-    fprintf(pfile,"  variables=%s \n",output_params.variable.c_str());
+    //fprintf(pfile,"# Athena++ data at time=%e",pm->time);
+    //fprintf(pfile,"  cycle=%d",pmb->pmy_mesh->ncycle);
+    //fprintf(pfile,"  variables=%s \n",output_params.variable.c_str());
 
     // write x1, x2, x3 column headers
     fprintf(pfile,"#");

@@ -1,0 +1,19 @@
+Your Athena++ distribution has now been configured with the following options:
+  Problem generator:       globaldisk
+  Coordinate system:       spherical_polar
+  Equation of state:       adiabatic
+  Riemann solver:          hlld
+  Reconstruction method:   plm
+  Hydro integrator:        vl2
+  Magnetic fields:         ON
+  Special relativity:      OFF
+  General relativity:      OFF
+  Frame transformations:   OFF
+  Debug flags:             OFF
+  Linker flags:              -lhdf5
+  MPI parallelism:         ON
+  OpenMP parallelism:      OFF
+  HDF5 output:             ON
+  Radiative Transfer:      ON
+  Compiler:                g++
+  Compilation command:     mpicxx  -O3

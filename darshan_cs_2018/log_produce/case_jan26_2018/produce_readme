@@ -1,0 +1,17 @@
+username: yanfei
+directory: /global/homes/y/yanfei/STMdot7
+date: Jan 26 2018
+
+source: $directory/src
+script: $directory/bin/Test
+
+compile:
+      cd $directory
+      module load darshan
+      module swap craype-haswell craype-mic-knl
+      module load cray-hdf5-parallel 
+      make 
+run:
+      change $output in /global/homes/y/yanfei/STMdot7/bin/STMdot7_2
+      change path of input file to be athinput.globaldisk   
+      sbatch Test

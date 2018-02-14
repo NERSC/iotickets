@@ -456,14 +456,14 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
 
   // Write cycle number
   int num_cycles = pm->ncycle;
-  hid_t attribute = H5Acreate2(file, "NumCycles", H5T_STD_I32BE, dataspace_scalar,
+  hid_t attribute = H5Acreate2(file, "NumCycles", H5T_NATIVE_INT, dataspace_scalar,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_INT, &num_cycles);
   H5Aclose(attribute);
 
   // Write simulation time
   double time = pm->time;
-  attribute = H5Acreate2(file, "Time", H5T_IEEE_F64BE, dataspace_scalar, H5P_DEFAULT,
+  attribute = H5Acreate2(file, "Time", H5T_NATIVE_DOUBLE, dataspace_scalar, H5P_DEFAULT,
       H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_DOUBLE, &time);
   H5Aclose(attribute);
@@ -485,7 +485,7 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   coord_range[0] = pm->mesh_size.x1min;
   coord_range[1] = pm->mesh_size.x1max;
   coord_range[2] = pm->mesh_size.x1rat;
-  attribute = H5Acreate2(file, "RootGridX1", H5T_IEEE_F64BE, dataspace_triple,
+  attribute = H5Acreate2(file, "RootGridX1", H5T_NATIVE_DOUBLE, dataspace_triple,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_DOUBLE, coord_range);
   H5Aclose(attribute);
@@ -494,7 +494,7 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   coord_range[0] = pm->mesh_size.x2min;
   coord_range[1] = pm->mesh_size.x2max;
   coord_range[2] = pm->mesh_size.x2rat;
-  attribute = H5Acreate2(file, "RootGridX2", H5T_IEEE_F64BE, dataspace_triple,
+  attribute = H5Acreate2(file, "RootGridX2", H5T_NATIVE_DOUBLE, dataspace_triple,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_DOUBLE, coord_range);
   H5Aclose(attribute);
@@ -503,7 +503,7 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   coord_range[0] = pm->mesh_size.x3min;
   coord_range[1] = pm->mesh_size.x3max;
   coord_range[2] = pm->mesh_size.x3rat;
-  attribute = H5Acreate2(file, "RootGridX3", H5T_IEEE_F64BE, dataspace_triple,
+  attribute = H5Acreate2(file, "RootGridX3", H5T_NATIVE_DOUBLE, dataspace_triple,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_DOUBLE, coord_range);
   H5Aclose(attribute);
@@ -513,13 +513,13 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   root_grid_size[0] = pm->mesh_size.nx1;
   root_grid_size[1] = pm->mesh_size.nx2;
   root_grid_size[2] = pm->mesh_size.nx3;
-  attribute = H5Acreate2(file, "RootGridSize", H5T_STD_I32BE, dataspace_triple,
+  attribute = H5Acreate2(file, "RootGridSize", H5T_NATIVE_INT, dataspace_triple,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_INT, root_grid_size);
   H5Aclose(attribute);
 
   // Write number of MeshBlocks
-  attribute = H5Acreate2(file, "NumMeshBlocks", H5T_STD_I32BE, dataspace_scalar,
+  attribute = H5Acreate2(file, "NumMeshBlocks", H5T_NATIVE_INT, dataspace_scalar,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_INT, &num_blocks_global);
   H5Aclose(attribute);
@@ -529,20 +529,20 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   meshblock_size[0] = nx1;
   meshblock_size[1] = nx2;
   meshblock_size[2] = nx3;
-  attribute = H5Acreate2(file, "MeshBlockSize", H5T_STD_I32BE, dataspace_triple,
+  attribute = H5Acreate2(file, "MeshBlockSize", H5T_NATIVE_INT, dataspace_triple,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_INT, meshblock_size);
   H5Aclose(attribute);
 
   // Write maximum refinement level
   int max_level = pm->current_level - pm->root_level;
-  attribute = H5Acreate2(file, "MaxLevel", H5T_STD_I32BE, dataspace_scalar, H5P_DEFAULT,
+  attribute = H5Acreate2(file, "MaxLevel", H5T_NATIVE_INT, dataspace_scalar, H5P_DEFAULT,
       H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_INT, &max_level);
   H5Aclose(attribute);
 
   // Write number of output cell-centered variables
-  attribute = H5Acreate2(file, "NumVariables", H5T_STD_I32BE, dataspace_dataset_list,
+  attribute = H5Acreate2(file, "NumVariables", H5T_NATIVE_INT, dataspace_dataset_list,
       H5P_DEFAULT, H5P_DEFAULT);
   H5Awrite(attribute, H5T_NATIVE_INT, num_variables);
   H5Aclose(attribute);
@@ -593,25 +593,25 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   }
 
   // Create datasets
-  dataset_levels = H5Dcreate(file, "Levels", H5T_STD_I32BE, filespace_blocks,
+  dataset_levels = H5Dcreate(file, "Levels", H5T_NATIVE_INT, filespace_blocks,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_locations = H5Dcreate(file, "LogicalLocations", H5T_STD_I64BE,
+  dataset_locations = H5Dcreate(file, "LogicalLocations", H5T_NATIVE_LONG,
       filespace_blocks_3, H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_x1f = H5Dcreate(file, "x1f", H5T_IEEE_F32BE, filespace_blocks_nx1,
+  dataset_x1f = H5Dcreate(file, "x1f", H5T_NATIVE_FLOAT, filespace_blocks_nx1,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_x2f = H5Dcreate(file, "x2f", H5T_IEEE_F32BE, filespace_blocks_nx2,
+  dataset_x2f = H5Dcreate(file, "x2f", H5T_NATIVE_FLOAT, filespace_blocks_nx2,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_x3f = H5Dcreate(file, "x3f", H5T_IEEE_F32BE, filespace_blocks_nx3,
+  dataset_x3f = H5Dcreate(file, "x3f", H5T_NATIVE_FLOAT, filespace_blocks_nx3,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_x1v = H5Dcreate(file, "x1v", H5T_IEEE_F32BE, filespace_blocks_nx1v,
+  dataset_x1v = H5Dcreate(file, "x1v", H5T_NATIVE_FLOAT, filespace_blocks_nx1v,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_x2v = H5Dcreate(file, "x2v", H5T_IEEE_F32BE, filespace_blocks_nx2v,
+  dataset_x2v = H5Dcreate(file, "x2v", H5T_NATIVE_FLOAT, filespace_blocks_nx2v,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
-  dataset_x3v = H5Dcreate(file, "x3v", H5T_IEEE_F32BE, filespace_blocks_nx3v,
+  dataset_x3v = H5Dcreate(file, "x3v", H5T_NATIVE_FLOAT, filespace_blocks_nx3v,
       H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
   datasets_celldata = new hid_t[num_datasets];
   for (int n = 0; n < num_datasets; ++n)
-    datasets_celldata[n] = H5Dcreate(file, dataset_names[n], H5T_IEEE_F32BE,
+    datasets_celldata[n] = H5Dcreate(file, dataset_names[n], H5T_NATIVE_FLOAT,
         filespaces_vars_blocks_nx3_nx2_nx1[n], H5P_DEFAULT, H5P_DEFAULT, H5P_DEFAULT);
 
   // Prepare local (hyperslabbed) dataspaces for writing datasets to file
@@ -688,19 +688,17 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
 #ifdef MPI_PARALLEL
   H5Pset_dxpl_mpio(property_list, H5FD_MPIO_COLLECTIVE);
 #endif
-  H5D_mpio_actual_io_mode_t * actual_io_mode;
+/*  H5D_mpio_actual_io_mode_t * actual_io_mode;
   herr_t io_mode= H5Pget_mpio_actual_io_mode(property_list, actual_io_mode);
   if(Globals::my_rank==0){
     if(io_mode>=0){
-    printf("IO mode:%d\n",*actual_io_mode);
-    }else printf("io mode error code:%d\n",io_mode);
+       printf("IO mode:%d\n",*actual_io_mode);
+    }else 
+       printf("io mode error code:%d\n",io_mode);
   } 
-  
+*/  
   uint32_t * local_no_collective_cause;
   uint32_t * global_no_collective_cause;
-//  herr_t whyio=H5Pget_mpio_no_collective_cause( property_list, local_no_collective_cause, global_no_collective_cause);
-//  printf("rank:%d io local:%lu,global:%lu\n",Globals::my_rank, local_no_collective_cause, global_no_collective_cause);
-//  exit(1);
   // dump all the data
   // Write refinement level and logical location
   double t1, t2;
@@ -767,7 +765,22 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   printf("costs: %.2f sec\n",t2-t1);
   herr_t whyio=H5Pget_mpio_no_collective_cause( property_list, local_no_collective_cause, global_no_collective_cause);
   printf("rank:%d io local:%lu,global:%lu\n",Globals::my_rank, local_no_collective_cause, global_no_collective_cause);
+  H5FD_mpio_xfer_t xfer_mode=H5FD_MPIO_INDEPENDENT; 
+  H5Pget_dxpl_mpio(property_list,&xfer_mode); 
+  if(xfer_mode==H5FD_MPIO_INDEPENDENT) 
+	printf("xfer is ind\n");
+  else if(xfer_mode==H5FD_MPIO_COLLECTIVE) 
+	printf("xfer is col\n");
+  else 
+	printf("xfer is not known,%d\n",xfer_mode);
   //exit(1);
+  H5D_mpio_actual_io_mode_t actual_io_mode;
+  herr_t io_mode= H5Pget_mpio_actual_io_mode(property_list, &actual_io_mode);
+  if(io_mode>=0)
+       printf("IO mode:%d\n",actual_io_mode);
+  else 
+       printf("IO mode error code:%d\n",io_mode);
+   
   }
   // Close property list
   H5Pclose(property_list);
