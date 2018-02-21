@@ -688,22 +688,14 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
 #ifdef MPI_PARALLEL
   H5Pset_dxpl_mpio(property_list, H5FD_MPIO_COLLECTIVE);
 #endif
-/*  H5D_mpio_actual_io_mode_t * actual_io_mode;
-  herr_t io_mode= H5Pget_mpio_actual_io_mode(property_list, actual_io_mode);
-  if(Globals::my_rank==0){
-    if(io_mode>=0){
-       printf("IO mode:%d\n",*actual_io_mode);
-    }else 
-       printf("io mode error code:%d\n",io_mode);
-  } 
-*/  
   uint32_t * local_no_collective_cause;
   uint32_t * global_no_collective_cause;
   // dump all the data
   // Write refinement level and logical location
-  double t1, t2;
+  double t1, t2, t0;
   MPI_Barrier(MPI_COMM_WORLD);
   t1=MPI_Wtime();
+  t0=t1;
   if(Globals::my_rank==0){printf("Start Writting dataset_levels\n");}
   H5Dwrite(dataset_levels, H5T_NATIVE_INT, memspace_blocks, filespace_blocks,
       property_list, levels_mesh);
@@ -763,6 +755,7 @@ void ATHDF5Output::WriteOutputFile(Mesh *pm, ParameterInput *pin, bool flag)
   t2=MPI_Wtime();
   if(Globals::my_rank==0){
   printf("costs: %.2f sec\n",t2-t1);
+  printf("Tcosts: %.2f sec\n",t2-t0);
   herr_t whyio=H5Pget_mpio_no_collective_cause( property_list, local_no_collective_cause, global_no_collective_cause);
   printf("rank:%d io local:%lu,global:%lu\n",Globals::my_rank, local_no_collective_cause, global_no_collective_cause);
   H5FD_mpio_xfer_t xfer_mode=H5FD_MPIO_INDEPENDENT; 
