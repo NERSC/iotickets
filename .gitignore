@@ -14,4 +14,11 @@ io-knl_INC0108778
 io-bigmem/_0004
 h5spark*
 netcdf-INC0108663
-
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/bin/athena_fixed
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/bin/athena_original
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/bin/slurm-10211577.out
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/bin/slurm-10212151.out
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/bin/slurm-10212403.out
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/obj/
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/src/outputs/.athena_hdf5_fixed.cpp
+darshan_cs_2018/io_slow/case_jan17_2018/STMdot7/src/outputs/.athena_hdf5_original.cpp
