@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "test.py", line 2, in <module>
+    import h5py
+  File "/usr/common/software/h5py-parallel/2.7.1/lib/python2.7/site-packages/h5py-2.7.1-py2.7-linux-x86_64.egg/h5py/__init__.py", line 26, in <module>
+    from . import _errors
+ImportError: dynamic module does not define module export function (PyInit__errors)
+Traceback (most recent call last):
+  File "test.py", line 2, in <module>
+    import h5py
+  File "/usr/common/software/h5py-parallel/2.7.1/lib/python2.7/site-packages/h5py-2.7.1-py2.7-linux-x86_64.egg/h5py/__init__.py", line 26, in <module>
+    from . import _errors
+ImportError: dynamic module does not define module export function (PyInit__errors)
+Traceback (most recent call last):
+  File "test.py", line 2, in <module>
+    import h5py
+  File "/usr/common/software/h5py-parallel/2.7.1/lib/python2.7/site-packages/h5py-2.7.1-py2.7-linux-x86_64.egg/h5py/__init__.py", line 26, in <module>
+    from . import _errors
+ImportError: dynamic module does not define module export function (PyInit__errors)
+Traceback (most recent call last):
+  File "test.py", line 2, in <module>
+    import h5py
+  File "/usr/common/software/h5py-parallel/2.7.1/lib/python2.7/site-packages/h5py-2.7.1-py2.7-linux-x86_64.egg/h5py/__init__.py", line 26, in <module>
+    from . import _errors
+ImportError: dynamic module does not define module export function (PyInit__errors)
+srun: error: nid02221: tasks 0-3: Exited with exit code 1
+srun: Terminating job step 16402612.0
