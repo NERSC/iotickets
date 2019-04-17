@@ -1,0 +1,30 @@
+Here is a batch file:
+
+/global/cscratch1/sd/ndk/ncclimo_test-batch-cori-knl/sbatch-bb-stage.sh
+
+I claim this is surprisingly fast on haswell and unbearably slow on KNL.
+
+a) To use the NCO tools, need to either load the nco modules, or point to where they are.
+Charlie Zender has his built executables and I managed to build them myself to see if
+I could affect change — I did not see any impact on the version of NCO or how it was compiled
+for the tests I performed. Assuming you can see into my directory for those tools,
+probably fine to use as-is.
+
+b) I usually do BB tests on interactive node, but here I’m experimenting with staging.
+I found that it’s actually much slower to read from BB, so instead I’m reading from scratch.
+I also found that the default location of these input files has stripe=12, and my tests
+show that stripe=1 is faster in more situations (though with enough processes, the striping
+is doesn’t seem to matter). I found that writing the output is notably faster using burst buffer,
+so that’s what I have there. Obv, you can change to write the data locally to scratch.
+
+c) There is only one ncclimo command uncommented which will run 136 tasks. You can see where
+I’ve tried others.
+
+d) I copy the data back to scratch as a test, but obv that’s not necessary.
+
+
+This example uses the ncclimo launching script. I also have a batch file that will
+instead call the ncrcat commands individually. I’m still trying to figure why the ncclimo
+script is faster than running ncrcat’s myself in certain situations — but I think
+it’s probably a fine proxy to debug what’s happening.  Can send you that as well if
+interested.

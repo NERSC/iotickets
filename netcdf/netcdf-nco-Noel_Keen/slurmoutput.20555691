@@ -1,0 +1,8 @@
+/global/cscratch1/sd/jialin/ioticket_2019/iotickets/netcdf/netcdf-nco-Noel_Keen
+Tue Apr 16 15:56:16 PDT 2019
+/usr/common/software/nco/4.7.4/intel/bin/ncclimo
+/var/opt/cray/dws/mounts/batch/20555691_striped_scratch
+grep: No match.
+Tue Apr 16 16:11:06 PDT 2019
+cp: cannot create directory '/var/opt/cray/dws/mounts/batch/20555691_striped_scratch/ne30/clm/': No such file or directory
+Tue Apr 16 16:11:06 PDT 2019
